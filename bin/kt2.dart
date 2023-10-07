@@ -11,18 +11,15 @@ void main(List<String> arguments) async {
   GetProd data = GetProd.fromJson(response.data);
   List<Cars> carsMassive = data.cars;
   int count = 0;
-  double sum = 0;
+  double sum = 0.0;
   double srznach = 0.0;
   for (var el in carsMassive) {
-    if (el.car_color in carsMassive == 'Yellow' && el.availability == true){
-    double spznach = el.price;
-    double price = double.parse(str.substring(1));
-    sum += price;
-    count ++;
-    srznach = sum/count;
-    
+    if (el.car_color == 'Yellow') {
+      double price = double.parse(el.price.substring(1));
+      sum += price;
+      count++;
+    }
   }
-  print(count);
-  print(sum);
-}
+  srznach = sum / count;
+  print(srznach);
 }

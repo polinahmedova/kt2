@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import '../cars/cars.dart';
 
 part 'getProd.freezed.dart';
 part 'getProd.g.dart';
