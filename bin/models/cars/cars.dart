@@ -7,10 +7,9 @@ part 'cars.g.dart';
 class Cars with _$Cars {
 
   factory Cars({
-    required bool availability,
-    required String car_color,
-    required String price,
-    required int id,
+    required String car,
+    required String car_vin,
+    required String car_model,
   }) = _Cars;
 
   factory Cars.fromJson(Map<String, dynamic> json) => _$CarsFromJson(json);

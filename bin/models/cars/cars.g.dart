@@ -7,16 +7,14 @@ part of 'cars.dart';
 // **************************************************************************
 
 _$CarsImpl _$$CarsImplFromJson(Map<String, dynamic> json) => _$CarsImpl(
-      availability: json['availability'] as bool,
-      car_color: json['car_color'] as String,
-      price: json['price'] as String,
-      id: json['id'] as int,
+      car: json['car'] as String,
+      car_vin: json['car_vin'] as String,
+      car_model: json['car_model'] as String,
     );
 
 Map<String, dynamic> _$$CarsImplToJson(_$CarsImpl instance) =>
     <String, dynamic>{
-      'availability': instance.availability,
-      'car_color': instance.car_color,
-      'price': instance.price,
-      'id': instance.id,
+      'car': instance.car,
+      'car_vin': instance.car_vin,
+      'car_model': instance.car_model,
     };
