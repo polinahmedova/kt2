@@ -12,12 +12,15 @@ void main(List<String> arguments) async {
   List<Cars> carsMassive = data.cars;
   int count = 0;
   double sum = 0;
+  double srznach = 0.0;
   for (var el in carsMassive) {
     if (el.car_color in carsMassive == 'Yellow' && el.availability == true){
-    String str = el.price;
+    double spznach = el.price;
     double price = double.parse(str.substring(1));
     sum += price;
     count ++;
+    srznach = sum/count;
+    
   }
   print(count);
   print(sum);
